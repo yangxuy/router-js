@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       ul li{
+           display: inline-block;
+           padding: 0 10px;
+           margin: 0;
+           width: 80px;
+           height: 50px;
+           line-height: 50px;
+       }
+    </style>
+    <script type="text/javascript" src="./router.js"></script>
+</head>
+<body>
+ <div>
+     <ul>
+         <li><a href="#/index?a=1">首页</a></li>
+         <li><a href="#/list?b=1">学院</a></li>
+         <li><a href="#/say?c=1">学生</a></li>
+         <li><a href="#/op?d=1&e=3">加载</a></li>
+     </ul>
+ </div>
+ <div id="content">
+  首页内容
+ </div>
+ <script>
+     Route.map('/index',function (currentHash) {
+         Route.asyncFun('js/index.js',currentHash)
+     });
+     Route.map('/list',function (currentHash) {
+         Route.asyncFun('js/index.js',currentHash)
+     });
+     Route.map('/say',function (currentHash) {
+         Route.asyncFun('js/index.js',currentHash)
+     });
+     Route.map('/open',function (currentHash) {
+         Route.asyncFun('js/index.js',currentHash)
+     });
+     Route.init()
+ </script>
+</body>
+</html>
